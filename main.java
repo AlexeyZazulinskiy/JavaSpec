@@ -2,7 +2,10 @@
 
 public class main {
 public static void main(String[] args) {
-    view.initToy();
-    
+    MagazineModel model = new MagazineModel();
+    Magazineview view = new Magazineview();
+    MagazinePresenter presenter = new MagazinePresenter(model, view);
+    presenter.magStart();
+
 }
 }
