@@ -1,17 +1,24 @@
 abstract class MagazineItem {
-    MagazineItem(){}
-public void setChance(){}
-public int getChance(){
-    return 0;
-}
-public void setQuantity(){};
-public int getQuantity(){
-    return 0;
-}
+    MagazineItem() {
+    }
+
+    public void setChance() {
+    }
+
+    public int getChance() {
+        return 0;
+    }
+
+    public void setQuantity() {
+    };
+
+    public int getQuantity() {
+        return 0;
+    }
 
 }
 
-public class Toy extends MagazineItem  {
+public class Toy extends MagazineItem {     // добавить хэш для id
     int id;
     String name;
     int chance;
@@ -19,19 +26,19 @@ public class Toy extends MagazineItem  {
     static int toyCount = 0;
     static int idCount = 0;
 
-    public Toy (String name, int chance, int quantity){
+    public Toy(String name, int chance, int quantity) {
         this.id = idCount;
-        idCount ++;
+        idCount++;
         this.name = name;
         this.chance = chance;
         this.quantity = quantity;
-        toyCount ++;
+        toyCount++;
     }
 
     public void setChance(int chance) {
         this.chance = chance;
     }
-    
+
     public int getChance() {
         return chance;
     }
@@ -47,13 +54,13 @@ public class Toy extends MagazineItem  {
     public static int getToyCount() {
         return toyCount;
     }
-
-    public int getId() {
-        return id;
+    
+    public String getName() {
+        return name;
     }
 
     @Override
-    public String toString(){
-        return id +" "+name + " " + quantity +" "+ chance;
+    public String toString() {
+        return id + " " + name + " " + chance + " " + quantity;
     }
 }
