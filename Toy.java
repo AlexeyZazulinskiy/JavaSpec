@@ -10,12 +10,11 @@ abstract class MagazineItem {
     }
 
     public void setQuantity() {
-    };
+    }
 
     public int getQuantity() {
         return 0;
     }
-
 }
 
 public class Toy extends MagazineItem {     // добавить хэш для id
@@ -54,13 +53,13 @@ public class Toy extends MagazineItem {     // добавить хэш для id
     public static int getToyCount() {
         return toyCount;
     }
-    
+
     public String getName() {
         return name;
     }
 
     @Override
     public String toString() {
-        return id + " " + name + " " + chance + " " + quantity;
+        return "id - " + id + " name - " + name + " chance - " + chance + " quantity - " + quantity;
     }
 }

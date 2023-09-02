@@ -56,6 +56,7 @@ public class Magazineview {
             System.out.println("N_" + count + " " + a);
             count++;
         }
+        UserInput.getString("press any key");
     }
 
     public void initToy(List<Toy> toyList) { // заполнение магазина игрушками

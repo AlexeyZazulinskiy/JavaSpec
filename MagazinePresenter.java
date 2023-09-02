@@ -23,9 +23,9 @@ public class MagazinePresenter {
 
         while (i < 0) {
             System.out.println(
-                    "Выберите действие: добавить игрушку - add \n вывести все игрушки - readall \n выбрать игрушки для изменения - choice");
+                    "Выберите действие: \n добавить игрушку - add \n вывести все игрушки - read \n выбрать игрушки для изменения - choice");
             String c = input.getString(
-                    "создать список розыгрыша - getlist \n разыграть игрушку (вывести в фаил) - gettoy \n выход - exit: ");
+                    " создать список розыгрыша - getlist \n разыграть игрушку (вывести в фаил) - gettoy \n выход - exit: \n ");
 
             switch (c) {
                 case "add":
@@ -43,9 +43,9 @@ public class MagazinePresenter {
                     break;
 
                 case "gettoy": // выдача игрушки (запись в фаил)
-                    for (i = 0; i < 10; i++) {
+               //     for (j = 0; j < 10; j++) {  // для отладки
                         model.receiveWinToy(toyWinList);
-                    }
+                //    }
                     break;
 
                 case "exit":
