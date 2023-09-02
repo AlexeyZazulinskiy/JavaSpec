@@ -7,10 +7,10 @@ public class Magazineview {
 
     }
 
-    public void choiceToy(List toyList) { // меню выбора конкретной игрушки для изменения
+    public void choiceToy(List<Toy> toyList) { // меню выбора конкретной игрушки для изменения
         printAll(toyList);
         int c = UserInput.getInt("Выберите номер: ");
-        editToy((Toy) toyList.get(c));
+        editToy(toyList.get(c));
     }
 
     public void editToy(Toy toy) { // меню изменения параметров игрушки
@@ -60,18 +60,17 @@ public class Magazineview {
 
     public void initToy(List<Toy> toyList) { // заполнение магазина игрушками
 
-       // String name = UserInput.getString("Введите наименование");
-       // int qt = UserInput.getInt("Введите количество");
-       // int ch = UserInput.getInt("Введите шанс");
-       // toyList.add(newToy(name, ch, qt));
+        // String name = UserInput.getString("Введите наименование");
+        // int qt = UserInput.getInt("Введите количество");
+        // int ch = UserInput.getInt("Введите шанс");
+        // toyList.add(newToy(name, ch, qt));
 
-        
-          // для отладки
-          toyList.add(newToy("Медвеженок", 20, 105));
-          toyList.add(newToy("Робот", 20, 105));
-          toyList.add(newToy("Кукла", 30, 105));
-          System.out.println(toyList);
-         
+        // для отладки
+        toyList.add(newToy("Медвеженок", 20, 105));
+        toyList.add(newToy("Робот", 20, 105));
+        toyList.add(newToy("Кукла", 30, 105));
+        // System.out.println(toyList);
+
     }
 }
 

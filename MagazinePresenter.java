@@ -16,13 +16,16 @@ public class MagazinePresenter {
         this.input = input;
     }
 
-    public static void magStart() throws IOException {     // главное меню
+    public static void magStart() throws IOException { // главное меню
         List<Toy> toyList = new ArrayList<Toy>();
         Queue<Toy> toyWinList = new LinkedList<>();
         int i = -1;
 
         while (i < 0) {
-            String c = input.getString("Выберите действие: add, readall, choice, getlist, gettoy, exit");
+            System.out.println(
+                    "Выберите действие: добавить игрушку - add \n вывести все игрушки - readall \n выбрать игрушки для изменения - choice");
+            String c = input.getString(
+                    "создать список розыгрыша - getlist \n разыграть игрушку (вывести в фаил) - gettoy \n выход - exit: ");
 
             switch (c) {
                 case "add":
@@ -40,9 +43,9 @@ public class MagazinePresenter {
                     break;
 
                 case "gettoy": // выдача игрушки (запись в фаил)
-                    for (i = 0; i<10;i++){
-                    model.receiveWinToy(toyWinList);
-                }
+                    for (i = 0; i < 10; i++) {
+                        model.receiveWinToy(toyWinList);
+                    }
                     break;
 
                 case "exit":
